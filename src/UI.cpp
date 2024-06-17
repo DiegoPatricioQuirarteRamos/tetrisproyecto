@@ -1,4 +1,4 @@
-include "UI.hpp"
+#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/UI.hpp"
 
 UI::UI(){
 	if(!font.loadFromFile("ka1.ttf")){

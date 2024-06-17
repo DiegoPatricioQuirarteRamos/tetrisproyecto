@@ -1,4 +1,4 @@
-#include "Parts.hpp"
+#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/Parts.hpp"
 
 Parts::Parts(){
 	parts= {{{1,1},

@@ -1,4 +1,4 @@
-#include "Sounds.hpp"
+#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/Sounds.hpp"
 
 Sounds::Sounds(){
 	music.openFromFile("music.ogg");

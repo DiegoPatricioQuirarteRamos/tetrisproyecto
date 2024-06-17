@@ -1,8 +1,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "Board.hpp"
-#include "UI.hpp"
-#include "Sounds.hpp"
+#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/Board.hpp"
+#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/UI.hpp"
+#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/Sounds.hpp"
 #include <fstream>
 
 using namespace std;

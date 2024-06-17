@@ -1,4 +1,4 @@
-#include "Board.hpp"
+#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/Board.hpp"
 
 Board::Board(){
 	memset(board,0,sizeof(board));
