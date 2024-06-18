@@ -1,0 +1,11 @@
+@startuml
+
+class Tetronimos
+class Fantasma
+class Mino 
+class Campo 
+class Fondo 
+class Puntaje
+class Jugador
+
+@enduml

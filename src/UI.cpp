@@ -1,27 +1,27 @@
 #include <UI.hpp>
 
 UI::UI(){
-	if(!font.loadFromFile("C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/assets/font/ka1.ttf")){
+	if(!font.loadFromFile(/*"C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/assets/font/ka1.ttf"*/"C:/Users/Usuario/Documents/GitHub/tetrisproyecto/assets/font/ka1.ttf")){
 		cout<<"Error al cargar fuente de texto"<<endl;
 	}
 	
 	scoreTextTitle.setFont(font);
-	scoreTextTitle.setFillColor(Color::White);
+	scoreTextTitle.setFillColor(Color::Red);
 	scoreTextTitle.setPosition(Vector2f(235,25));
 	scoreTextTitle.setString("Score");
 	
 	maxScoreTextTitle.setFont(font);
-	maxScoreTextTitle.setFillColor(Color::White);
+	maxScoreTextTitle.setFillColor(Color::Yellow);
 	maxScoreTextTitle.setPosition(Vector2f(225,200));
 	maxScoreTextTitle.setString("Max Score");
 	maxScoreTextTitle.setCharacterSize(20);
 	
 	scoreText.setFont(font);
-	scoreText.setFillColor(Color::White);
+	scoreText.setFillColor(Color::Green);
 	scoreText.setPosition(Vector2f(250,70));
 	
 	maxScoreText.setFont(font);
-	maxScoreText.setFillColor(Color::White);
+	maxScoreText.setFillColor(Color::Blue);
 	maxScoreText.setPosition(Vector2f(250,245));
 	
 	byText.setFont(font);
@@ -33,13 +33,13 @@ UI::UI(){
 	gameOverText.setFont(font);
 	gameOverText.setFillColor(Color::White);
 	gameOverText.setPosition(Vector2f(8,150));
-	gameOverText.setString("Game Over");
+	gameOverText.setString("!Loser!");
 	gameOverText.setCharacterSize(25);	
 	
 	newScoreText.setFont(font);
 	newScoreText.setFillColor(Color::White);
 	newScoreText.setPosition(Vector2f(8,150));
-	newScoreText.setString("New Score");
+	newScoreText.setString("New Record");
 	newScoreText.setCharacterSize(25);	
 	
 }
