@@ -2,7 +2,7 @@
 #include "C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/include/UI.hpp"
 
 UI::UI(){
-	if(!font.loadFromFile("ka1.ttf")){
+	if(!font.loadFromFile("C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/assets/font/ka1.ttf")){
 		cout<<"Error al cargar fuente de texto"<<endl;
 	}
 	
@@ -28,7 +28,7 @@ UI::UI(){
 	byText.setFont(font);
 	byText.setFillColor(Color::White);
 	byText.setPosition(Vector2f(260,370));
-	byText.setString("by Dit");
+	byText.setString("pato");
 	byText.setCharacterSize(20);
 
 	gameOverText.setFont(font);
