@@ -1,7 +1,7 @@
 #include <UI.hpp>
 
 UI::UI(){
-	if(!font.loadFromFile(/*"C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/assets/font/ka1.ttf"*/"C:/Users/Usuario/Documents/GitHub/tetrisproyecto/assets/font/ka1.ttf")){
+	if(!font.loadFromFile("./assets/font/ka1.ttf")){
 		cout<<"Error al cargar fuente de texto"<<endl;
 	}
 	
