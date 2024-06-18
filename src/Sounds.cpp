@@ -1,5 +1,5 @@
-//#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/Sounds.hpp"
-#include "C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/include/Sounds.hpp"
+
+#include <Sounds.hpp>
 
 Sounds::Sounds(){
 	music.openFromFile("C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/assets/music/music.ogg");

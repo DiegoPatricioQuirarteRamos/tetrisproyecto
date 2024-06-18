@@ -1,5 +1,4 @@
-//#include "C:/Users/Usuario/Documents/GitHub/tetrisproyecto/include/UI.hpp"
-#include "C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/include/UI.hpp"
+#include <UI.hpp>
 
 UI::UI(){
 	if(!font.loadFromFile("C:/Users/diequ/OneDrive/Documentos/GitHub/tetrisproyecto/assets/font/ka1.ttf")){
