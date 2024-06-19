@@ -2,38 +2,36 @@
 SRC_DIR := src
 BIN_DIR := bin
 
-# Librerías y flags para SFML
+# Archivos SFML y librerías
 SFML := -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 # Obtener todos los archivos .cpp en el directorio de origen
 CPP_FILES := $(wildcard $(SRC_DIR)/*.cpp)
 
-# Generar los nombres de los archivos .o en el directorio de destino
+# Generar los nombres de los archivos .o correspondientes
 OBJ_FILES := $(patsubst $(SRC_DIR)/%.cpp,$(BIN_DIR)/%.o,$(CPP_FILES))
 
-# Nombre del archivo ejecutable
-TARGET := $(BIN_DIR)/tetris
+# Asegurar que el directorio de destino exista
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
 
-# Flags del compilador
-CXXFLAGS := -std=c++17 -Wall -Iinclude
+# Regla para compilar los archivos .cpp en archivos .o
+$(BIN_DIR)/%.o: $(SRC_DIR)/%.cpp $(wildcard include/*.hpp) | $(BIN_DIR)
+	g++ -c $< -o $@ $(SFML) -Iinclude
 
-# Regla principal
-all: $(TARGET)
+# Regla para enlazar los archivos .o en el archivo ejecutable
+$(BIN_DIR)/main.exe: $(OBJ_FILES)
+	g++ $^ -o $@ $(SFML) -Iinclude
 
-# Regla para compilar el ejecutable
-$(TARGET): $(OBJ_FILES)
-	$(CXX) $(OBJ_FILES) -o $(TARGET) $(SFML)
+# Regla por defecto para compilar todos los archivos .cpp
+all: $(BIN_DIR)/main.exe
 
-# Regla para compilar los archivos fuente
-$(BIN_DIR)/%.o: $(SRC_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+# Regla para ejecutar el archivo .exe
+run-main: $(BIN_DIR)/main.exe
+	./$<
 
 # Regla para limpiar los archivos generados
 clean:
-	rm -f $(OBJ_FILES) $(TARGET)
+	rm -f $(BIN_DIR)/*.o $(BIN_DIR)/*.exe
 
-# Regla para ejecutar el programa
-run: $(TARGET)
-	./$(TARGET)
-
-.PHONY: all clean run
+.PHONY: all clean run-main

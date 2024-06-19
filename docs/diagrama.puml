@@ -1,5 +1,4 @@
 @startuml tetris 
-
 class Jugador
 class Teclado
 class Campo 
@@ -7,6 +6,13 @@ class Fondo
 class Tetromino
 class Mino 
 class Puntaje
+class Color
+class Forma
+class 
+
+Mino *-- Color
+Mino *-- Puntaje
+Puntaje *-- Color
 
 Jugador *-- Puntaje
 Jugador o-- Teclado
@@ -14,5 +20,8 @@ Fondo *--Campo
 Mino o-- Campo
 Tetromino --|> Mino
 Tetromino o-- Campo
+Tetronimo o-- Color
+Tetronimo o-- Forma
+Color *-- Tetromino
 
 @enduml

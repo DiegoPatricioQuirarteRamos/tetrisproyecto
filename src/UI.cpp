@@ -27,13 +27,13 @@ UI::UI(){
 	byText.setFont(font);
 	byText.setFillColor(Color::White);
 	byText.setPosition(Vector2f(260,370));
-	byText.setString("pato");
+	byText.setString("Tetris");
 	byText.setCharacterSize(20);
 
 	gameOverText.setFont(font);
 	gameOverText.setFillColor(Color::White);
 	gameOverText.setPosition(Vector2f(8,150));
-	gameOverText.setString("!Loser!");
+	gameOverText.setString("Game Over");
 	gameOverText.setCharacterSize(25);	
 	
 	newScoreText.setFont(font);
