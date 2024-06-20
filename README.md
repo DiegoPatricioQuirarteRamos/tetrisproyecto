@@ -1,6 +1,6 @@
 # Tetris
 ##
-![Tetris](https://www.google.com.mx/url?sa=i&url=https%3A%2F%2Fwww.amazon.es%2FTetris-Online-Inc%2Fdp%2FB00HAOGSYG&psig=AOvVaw2p0-zuaUWMYGdcbAc8Iccm&ust=1718758865507000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMiK6dD544YDFQAAAAAdAAAAABAE)
+![Tetris](https://miro.medium.com/v2/resize:fit:1400/1*26lHxJ2Icsx4BWct9-h6Tw.jpeg)
 
 [Informacion del juego](https://tetrismania.net/)
 

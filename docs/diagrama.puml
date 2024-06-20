@@ -1,27 +1,59 @@
 @startuml tetris 
-class Jugador
-class Teclado
-class Campo 
-class Fondo 
-class Tetromino
-class Mino 
-class Puntaje
-class Color
-class Forma
-class 
+class Jugador{
+    o nombre
+    -entrada
+}
+class Teclado{
+    -capturarentrada()
+}
+class Campo{
+    o cuadricula
+    o ancho 
+    o alto 
+    -agregarpieza()
+    -removerlineascompletas()
+    -estalleno()
+}
+class Fondo{
+    -dibujar()
+}
+class Tetromino{
+    o forma
+    o posicion
+    -rotar()
+    -moverizquierda()
+    -moverderecha()
+    -moverabajo()
+}
+class Mino{
+    o x
+    o y 
+    o estaocupado
+}
+class Puntaje{
+    o puntos
+    -agregarpuntos()
+    -reiniciar()
+}
+class Color{
+    o valor
+}
+class Forma{
+    o tipo 
+}
 
-Mino *-- Color
-Mino *-- Puntaje
-Puntaje *-- Color
+Mino *-- "1" Color
+Mino "1" *-- "1" Puntaje
+Puntaje "1" *-- "1" Color
 
-Jugador *-- Puntaje
-Jugador o-- Teclado
-Fondo *--Campo
-Mino o-- Campo
-Tetromino --|> Mino
-Tetromino o-- Campo
-Tetronimo o-- Color
-Tetronimo o-- Forma
-Color *-- Tetromino
+Jugador "1" *-- "1" Puntaje
+Jugador "1" o-- "1" Teclado
+Fondo "1" *-- "1" Campo
+Mino "1" o-- "1" Campo
+Tetromino "1" --|> Mino
+Tetromino "1" o-- "1" Campo
+Tetronimo "1" o-- "1" Color
+Tetronimo "1" o-- "1" Forma
+Color "1"*--"1" Tetromino
 
 @enduml
